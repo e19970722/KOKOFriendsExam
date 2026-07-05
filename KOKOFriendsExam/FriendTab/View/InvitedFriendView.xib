@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvitedFriendView" customModule="KOKOFriendsExam" customModuleProvider="target">
+            <connections>
+                <outlet property="cardView" destination="l3N-9J-LUs" id="Pj5-vm-Mbs"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="t6i-d5-Ean"/>
+                <outlet property="imageView" destination="mGa-7h-L9M" id="qbo-uE-wY4"/>
+                <outlet property="nameLabel" destination="c11-0i-KJt" id="r00-kF-5RP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="101"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-9J-LUs">
+                    <rect key="frame" x="0.0" y="0.0" width="342" height="101"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ZzL-8e-4Kc">
+                    <rect key="frame" x="15" y="30.666666666666671" width="312" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aJm-Ff-ike">
+                            <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="40"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFriendsFemaleDefault" translatesAutoresizingMaskIntoConstraints="NO" id="mGa-7h-L9M">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="E1r-nc-mq6"/>
+                                        <constraint firstAttribute="width" constant="40" id="l4k-rQ-gcw"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mvT-jS-WqB">
+                                    <rect key="frame" x="55.000000000000007" y="0.0" width="106.66666666666669" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c11-0i-KJt">
+                                            <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="19"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" name="lightGrey"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀請你成為好友：）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lF-wl-oPn">
+                                            <rect key="frame" x="0.0" y="20.999999999999996" width="106.66666666666667" height="19.000000000000004"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" name="lightGrey 2"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="u4Y-8g-jR0">
+                            <rect key="frame" x="237" y="0.0" width="75" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU4-cz-VuK">
+                                    <rect key="frame" x="0.0" y="4.9999999999999964" width="30" height="30.000000000000004"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="BlO-Ig-8kX"/>
+                                        <constraint firstAttribute="height" constant="30" id="jjC-rC-5Lh"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="btnFriendsAgree"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDn-3B-uX4">
+                                    <rect key="frame" x="45" y="4.9999999999999964" width="30" height="30.000000000000004"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="8dd-Pr-lhN"/>
+                                        <constraint firstAttribute="width" constant="30" id="bDV-ZA-iAj"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="btnFriendsDelet"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="l3N-9J-LUs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3O3-EH-YH0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l3N-9J-LUs" secondAttribute="trailing" id="3ry-XW-XKJ"/>
+                <constraint firstItem="l3N-9J-LUs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5qy-fB-ZhG"/>
+                <constraint firstAttribute="trailing" secondItem="ZzL-8e-4Kc" secondAttribute="trailing" constant="15" id="F2J-Y6-hbg"/>
+                <constraint firstItem="ZzL-8e-4Kc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Jdd-CK-DPP"/>
+                <constraint firstItem="ZzL-8e-4Kc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cbU-IA-4m9"/>
+                <constraint firstAttribute="bottom" secondItem="l3N-9J-LUs" secondAttribute="bottom" id="v2U-jZ-rDq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-873.28244274809151" y="-315.84507042253523"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnFriendsAgree" width="30" height="30"/>
+        <image name="btnFriendsDelet" width="30" height="30"/>
+        <image name="imgFriendsFemaleDefault" width="52" height="54"/>
+        <namedColor name="lightGrey">
+            <color red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGrey 2">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

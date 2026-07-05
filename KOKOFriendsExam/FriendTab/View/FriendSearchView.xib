@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendSearchView" customModule="KOKOFriendsExam" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="kEU-eD-VFc"/>
+                <outlet property="searchBackgroundView" destination="xng-67-kf4" id="1Be-o0-d83"/>
+                <outlet property="textField" destination="65o-dm-ieU" id="zcN-Cu-2ta"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xng-67-kf4" userLabel="searchBackgroundView">
+                    <rect key="frame" x="0.0" y="15" width="354" height="36"/>
+                    <color key="backgroundColor" name="steel"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="7x9-bd-6fb"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7sS-bV-4NU">
+                    <rect key="frame" x="10" y="21" width="383" height="24"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zPv-Ny-R2p" userLabel="searchStackView">
+                            <rect key="frame" x="0.0" y="0.0" width="344" height="24"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSearchBarSearchGray" translatesAutoresizingMaskIntoConstraints="NO" id="6iA-ab-tQq">
+                                    <rect key="frame" x="0.0" y="5" width="14" height="14"/>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="想轉一筆給誰呢？" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="65o-dm-ieU">
+                                    <rect key="frame" x="22" y="1" width="322" height="22"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQQ-fO-1gh">
+                            <rect key="frame" x="359" y="0.0" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Z6a-KL-KvK"/>
+                                <constraint firstAttribute="width" constant="24" id="bqN-U6-ZIh"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icBtnAddFriends"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="xng-67-kf4" firstAttribute="centerY" secondItem="zPv-Ny-R2p" secondAttribute="centerY" id="1wL-A5-PaT"/>
+                <constraint firstItem="7sS-bV-4NU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VrV-n1-rdZ"/>
+                <constraint firstItem="7sS-bV-4NU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="auW-Sm-VQo"/>
+                <constraint firstItem="xng-67-kf4" firstAttribute="trailing" secondItem="zPv-Ny-R2p" secondAttribute="trailing" id="rlU-zb-neO"/>
+                <constraint firstItem="xng-67-kf4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tGu-KM-Nb5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7sS-bV-4NU" secondAttribute="trailing" id="vYY-rQ-nN5"/>
+                <constraint firstItem="xng-67-kf4" firstAttribute="leading" secondItem="zPv-Ny-R2p" secondAttribute="leading" id="xSs-Wc-AJz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="xSs-Wc-AJz"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="200.76335877862596" y="-292.25352112676057"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icBtnAddFriends" width="25" height="25"/>
+        <image name="icSearchBarSearchGray" width="14" height="14"/>
+        <namedColor name="steel">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="0.11999999731779099" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
