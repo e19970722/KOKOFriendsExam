@@ -20,7 +20,7 @@ enum FetchCase {
 
 class FriendViewController: UIViewController {
     /// ⬇️ 調整這邊～
-    private let fetchCase: FetchCase = .friendListNoInvitation
+    private let fetchCase: FetchCase = .noFriend
     private let vm = FriendViewModel()
     private var cancellable = Set<AnyCancellable>()
     
