@@ -20,7 +20,7 @@ enum FetchCase {
 
 class FriendViewController: UIViewController {
     /// ⬇️ 調整這邊～
-    private let fetchCase: FetchCase = .noFriend
+    private let fetchCase: FetchCase = .friendListWithFriends
     private let vm = FriendViewModel()
     private var cancellable = Set<AnyCancellable>()
     
@@ -55,8 +55,9 @@ class FriendViewController: UIViewController {
         let view = InvitedFriendSV()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.onExpandChanged = { [weak self] _ in
-            self?.sizeHeaderToFit()
-            self?.tableView.reloadData()
+            guard let self = self else { return }
+            self.sizeHeaderToFit()
+            self.tableView.reloadData()
         }
         return view
     }()
@@ -165,6 +166,8 @@ class FriendViewController: UIViewController {
                 self.invitedFriendSV.isHidden = friends.isEmpty
                 if !friends.isEmpty {
                     self.invitedFriendSV.updateUI(friends: friends)
+                    self.sizeHeaderToFit()
+                    self.tableView.reloadData()
                 }
                 self.headerSV.setCustomSpacing(friends.isEmpty ? 23 : 35, after: self.mainInfoView)
             }

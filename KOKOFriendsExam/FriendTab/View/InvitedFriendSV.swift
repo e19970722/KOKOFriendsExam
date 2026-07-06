@@ -36,6 +36,7 @@ class InvitedFriendSV: UIView {
     }()
 
     private var peekConstraints: [NSLayoutConstraint] = []
+    private lazy var stackBottomConstraint: NSLayoutConstraint = bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,7 +54,7 @@ class InvitedFriendSV: UIView {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stackBottomConstraint,
         ])
     }
 
@@ -97,11 +98,13 @@ class InvitedFriendSV: UIView {
         NSLayoutConstraint.deactivate(peekConstraints)
         peekConstraints.removeAll()
         peekView.removeFromSuperview()
+        stackBottomConstraint.constant = 0
 
         guard let frontCard = frontCard, hasMoreThanOne else { return }
 
         insertSubview(peekView, belowSubview: stackView)
         peekView.isHidden = isExpand
+        stackBottomConstraint.constant = isExpand ? 0 : 8
 
         peekConstraints = [
             peekView.leadingAnchor.constraint(equalTo: frontCard.leadingAnchor, constant: 12),
@@ -117,6 +120,9 @@ class InvitedFriendSV: UIView {
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
             self.peekView.isHidden = self.isExpand
+            if self.peekView.superview != nil {
+                self.stackBottomConstraint.constant = self.isExpand ? 0 : 8
+            }
             self.stackView.arrangedSubviews.forEach { view in
                 if view.tag != 0 {
                     view.isHidden = !self.isExpand
